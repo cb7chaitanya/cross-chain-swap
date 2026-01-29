@@ -1,0 +1,62 @@
+{
+  "_comment": "Real Relay API (POST /quote/v2) response shape. fees.gas.amountFormatted and details.currencyOut.amountFormatted are what we map to QuoteResult.",
+  "steps": [
+    {
+      "id": "deposit",
+      "action": "Confirm transaction in your wallet",
+      "description": "Depositing funds to the relayer to execute the swap for USDC",
+      "kind": "transaction",
+      "requestId": "0x92b99e6e1ee1deeb9531b5ad7f87091b3d71254b3176de9e8b5f6c6d0bd3a331",
+      "items": [
+        {
+          "status": "incomplete",
+          "data": {
+            "from": "0x0CccD55A5Ac261Ea29136831eeaA93bfE07f5Db6",
+            "to": "0xf70da97812cb96acdf810712aa562db8dfa3dbef",
+            "data": "0x00fad611",
+            "value": "1000000000000000000",
+            "maxFeePerGas": "12205661344",
+            "maxPriorityFeePerGas": "2037863396",
+            "chainId": 8453
+          },
+          "check": {
+            "endpoint": "/intents/status?requestId=0x92b99e6e1ee1deeb9531b5ad7f87091b3d71254b3176de9e8b5f6c6d0bd3a331",
+            "method": "GET"
+          }
+        }
+      ]
+    }
+  ],
+  "fees": {
+    "gas": {
+      "amount": "1000",
+      "amountFormatted": "0.001",
+      "currency": {
+        "chainId": 8453,
+        "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    },
+    "relayer": {
+      "amount": "1000",
+      "amountFormatted": "0.001",
+      "currency": {
+        "chainId": 8453,
+        "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+        "symbol": "USDC",
+        "decimals": 6
+      }
+    }
+  },
+  "details": {
+    "currencyIn": {
+      "amountFormatted": "100",
+      "currency": { "chainId": 792703809, "symbol": "USDC", "decimals": 6 }
+    },
+    "currencyOut": {
+      "amountFormatted": "99",
+      "currency": { "chainId": 8453, "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913", "symbol": "USDC", "decimals": 6 }
+    }
+  }
+}
